@@ -26,4 +26,19 @@ public class FibonacciCalc {
 
         return valorDeSaida;
     }
+
+    /**
+     * Essa função verifica dentro de um fibonacci, se o número que está no parametro existe no fibonacci
+     * @param numero parametro para inician o fibonacci
+     * @return retorna true se achou o valor, ou false se não achou
+     */
+    public boolean verificarSePertence(int numero) {
+        int[] fibonacci = calcularFibonacci(numero);
+        for (int i = 0; i < fibonacci.length; i++ ) {
+            if (fibonacci[i] == numero) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

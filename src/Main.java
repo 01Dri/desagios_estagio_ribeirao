@@ -26,10 +26,15 @@ public class Main {
 
 
         FibonacciCalc fibonacciCalc = new FibonacciCalc();
-        System.out.println("Digite um número para calcular seu fibonacci: ");
+        System.out.println("Digite um número para procurar o fibonacci: ");
         Integer valor = scanner.nextInt();
         int[] resultado = fibonacciCalc.calcularFibonacci(valor);
         System.out.println("O resultado do seu fibonacci de " + valor + " é: " + Arrays.toString(resultado));
+        if (fibonacciCalc.verificarSePertence(valor)) {
+            System.out.println("Sim o valor: " + valor  + " está presente no fibonacci");
+        } else {
+            System.out.println("Não o valor: " + valor  + " não está presente no fibonacci");
+        }
 
         InversorChar inversor = new InversorChar();
         System.out.println("Digite uma palavra para ser invertida: ");
